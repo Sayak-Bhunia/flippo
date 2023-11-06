@@ -17,92 +17,34 @@ nav {
 
 label.logo {
   color: #4f5d75;
-  line-height: 80px;
-  padding: 0 100px;
+  line-height: 56px;
+  margin-left: 30px;
   font-size: 35px;
   font-weight: bold;
   font-family: "Noto Sans JP", sans-serif;
 }
 
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-  font-family: "Poppins", serif;
-  font-size: 20px;
-}
-
-nav ul li a {
-  color: black;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-decoration: none;
-}
-
-a.active,
-a:hover {
-  color: #407bd8;
-  transition: 0.2s;
-}
-
 .checkbtn {
-  color: black;
-  font-size: 30px;
+  color: #415a77;
   float: right;
   line-height: 80px;
   margin-right: 40px;
   cursor: pointer;
-  display: none;
+  display: block;
 }
 
 #check {
   display: none;
 }
 
-@media (max-width: 952px) {
+@media (min-width: 952px) {
   label.logo {
     font-size: 30px;
     padding-left: 50px;
+    padding: 0 100px;
   }
   nav ul li a {
     font-size: 16px;
-  }
-}
-
-@media (max-width: 858px) {
-  .checkbtn {
-    display: block;
-  }
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-  }
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  a:hover,
-  a.active {
-    background: none;
-    color: #407bd8;
-  }
-  #check:checked ~ ul {
-    left: 0;
   }
 }
 
@@ -136,6 +78,41 @@ section {
   margin-bottom: 1rem;
   font-size: 3rem;
   color: #8d99ae;
+}
+
+.column-left h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #1d3557;
+  overflow: hidden;
+  border-right: 2px solid #8d99ae;
+  animation: typing-animation 6s steps(40) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #8d99ae;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .column-left h2 {
+    white-space: normal;
+  }
 }
 
 .column-left p {
@@ -236,6 +213,7 @@ button:hover {
 .image {
   width: 80%;
   height: 80%;
+  border-radius: 100%;
 }
 
 @media screen and (max-width: 768px) {
